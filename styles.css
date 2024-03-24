@@ -1,0 +1,30 @@
+#interview {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    width: 40%;
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 5px 0px 0px 5px;
+}
+
+#interview img {
+    margin: 5px; /* Adjust as needed to create spacing between the image and the text */
+    vertical-align: middle; /* Align the image vertically with the text */
+}
+
+#reject {
+    background-color: rgba(245, 61, 107, 1);
+    width: 30%;
+}
+
+#saveLater{
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    width: 30%;
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 0px 5px 5px 0px;
+}
+
+

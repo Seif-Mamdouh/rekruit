@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Rekruit",
+  "version": "1.0",
+  "description": "Automatically pops up when a LinkedIn profile URL is found.",
+  "permissions": ["activeTab", "declarativeNetRequest", "storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["*://*.linkedin.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
