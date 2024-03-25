@@ -10,6 +10,13 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "web_accessible_resources": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "resources": ["icons/archive.png", "icons/plusIcon.png", "icons/trash.png"]
+    }
+  ],
+
   "host_permissions": ["*://*.linkedin.com/*"],
   "content_scripts": [
     {
