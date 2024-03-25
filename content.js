@@ -27,21 +27,51 @@ function addButtons() {
     var saveLater = document.createElement("button");
     saveLater.id = "saveLater";
     saveLater.textContent = "Save for Later";
-
-    var buttonContainer = document.querySelector(".pv-top-card-v2-ctas");
-
+    
+    var interviewImg = document.createElement("img");
+    interviewImg.src = chrome.runtime.getURL("./icons/plusIcon.png");
+    interviewImg.width = 20;
+    interviewImg.height = 20;
+    interview.prepend(interviewImg);
+    
+    var rejectImg = document.createElement("img");
+    rejectImg.src = chrome.runtime.getURL("./icons/trash.png");
+    rejectImg.width = 20;
+    rejectImg.height = 20;
+    reject.prepend(rejectImg);
+    
+    var saveImg = document.createElement("img");
+    saveImg.src = chrome.runtime.getURL("./icons/archive.png");
+    saveImg.width = 20;
+    saveImg.height = 20;
+    saveLater.prepend(saveImg);
+    
     console.log("button container: ", buttonContainer)
+    
+    // buttonContainer.style.display = "flex";
+    // buttonContainer.style.gap = "2px";
+    var buttonContainer = document.createElement("div");
+    buttonContainer.id = "buttonContainer";
 
-    if (buttonContainer) {
-      buttonContainer.style.display = "flex";
-      buttonContainer.style.gap = "1px";
-
-      buttonContainer.appendChild(interview);
-      buttonContainer.appendChild(reject);
-      buttonContainer.appendChild(saveLater);
-      console.log("Buttons added successfully to the container:",buttonContainer);
-    } else {
+    buttonContainer.appendChild(interview);
+    buttonContainer.appendChild(reject);
+    buttonContainer.appendChild(saveLater);
+    
+    
+    var linkedinContainer = document.querySelector(".pv-top-card-v2-ctas");
+    
+    console.log(
+      "Buttons added successfully to the container:",
+      linkedinContainer
+    );
+    
+    if (linkedinContainer) {
+      linkedinContainer.appendChild(buttonContainer);
+      linkedinContainer.style.flexWrap = "wrap";
+      linkedinContainer.style.display = "flex";
+    }
+    else {
       console.log("Error: Button container not found");
     }
-  }
+    }
 }

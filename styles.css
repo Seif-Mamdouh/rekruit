@@ -1,3 +1,23 @@
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 5px; */
+    gap: 3px;
+}
+
+#buttonContainer button img {
+    width: 20px;
+}
+
+#buttonContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 60% */
+    /* height: 3vh; */
+    /* text-wrap: nowrap; */
+}
+
 #interview {
     background-color: black;
     color: white;
@@ -5,6 +25,7 @@
     width: 40%;
     /* top-left | top-right | bottom-right | bottom-left */
     border-radius: 5px 0px 0px 5px;
+    
 }
 
 #interview img {
@@ -14,6 +35,7 @@
 
 #reject {
     background-color: rgba(245, 61, 107, 1);
+    color: white;
     width: 30%;
 }
 
