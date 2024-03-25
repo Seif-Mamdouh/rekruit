@@ -35,6 +35,7 @@
 
 #reject {
     background-color: rgba(245, 61, 107, 1);
+    color: white;
     width: 30%;
 }
 
